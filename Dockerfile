@@ -11,7 +11,7 @@ ENV DB_URL=mysql://admin:Navya_56@database-2.cacjlsbfaqdn.ap-south-1.rds.amazona
 ENV ACCESS_KEY=AKIA6EHEVZYHMAOG5UXJ
 ENV SECRET_KEY=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
 #this runs when image is built
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 COPY . .
 
