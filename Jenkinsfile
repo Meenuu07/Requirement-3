@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "navya/jenkins_docker-image"
+    imagename = "Navya653/docker-image"
     registryCredential = 'dockerCredentials'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/Navya653/jenkins-static-website', branch: 'master'])
+        git([url: 'https://github.com/Navya653/jenkins_docker-image', branch: 'master'])
 
       }
     }
