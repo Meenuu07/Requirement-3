@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "Navya653/docker-image"
+    imagename = "navya56/docker-image"
     registryCredential = 'dockerCredentials'
     dockerImage = ''
   }
