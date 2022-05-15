@@ -5,7 +5,7 @@ COPY [^\.]* /usr/local/apache2/htdocs/
 
 WORKDIR /app
 # We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt .
+#COPY ./requirements.txt .
 
 ENV DB_URL=mysql://admin:Navya_56@database-2.cacjlsbfaqdn.ap-south-1.rds.amazonaws.com/aws
 ENV ACCESS_KEY=AKIA6EHEVZYHMAOG5UXJ
