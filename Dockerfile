@@ -12,7 +12,7 @@ ENV ACCESS_KEY=Dummyaccesskey
 ENV SECRET_KEY=Dummysecretkey
 #this runs when image is built
 #RUN pip install -r requirements.txt
-
+#Jenkins container does not have python
 COPY . .
 
 
