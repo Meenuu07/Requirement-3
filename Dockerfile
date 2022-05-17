@@ -11,7 +11,7 @@ ENV DB_URL=Dummyurl
 ENV ACCESS_KEY=Dummyaccesskey
 ENV SECRET_KEY=Dummysecretkey
 #this runs when image is built
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . .
 
