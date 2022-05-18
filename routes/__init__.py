@@ -1,5 +1,3 @@
 import routes.myroutes
 import routes.dbroutes
-import routes.routes 
-
-
+import routes.routes

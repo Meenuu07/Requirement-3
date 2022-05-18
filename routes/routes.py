@@ -1,9 +1,9 @@
 from config import app,client
 from flask import request
 
-@app.route('/upload',methods=['POST'])
+@app.route('/upload-file',methods=['POST'])
 def upload_image():
-    bucket='terraformb817305'
+    bucket='terraformb13'
     content_type=request.mimetype
     obj=request.files['file']
     filename=obj.filename
@@ -13,4 +13,9 @@ def upload_image():
           ContentType=content_type
     )
 
-    return {'message': 'file uploaded'}, 200 
+    return {'message': 'file uploaded'}, 200
+
+@app.route("/download-file/<string:filename>",methods=["GET"])
+def getFileToDownload(filename):
+      client.download_file('terraformb13',filename,"c:\\new-downloads\\"+filename)
+      return {"message ": "check the download folder"}, 200

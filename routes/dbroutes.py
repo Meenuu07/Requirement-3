@@ -2,14 +2,14 @@ from config import app,db
 from flask import jsonify,request,abort
 from models import DbPerson
 
-@app.route("/dbemployee")
-def getDbemployee():
+@app.route("/employees")
+def getDbPeople():
     listp=DbPerson.query.all()
     result = [x.serialize() for x in listp]
     return jsonify(result)
 
 
-@app.route("/dbemployee",methods=['POST'])
+@app.route("/employees",methods=['POST'])
 def processDepartments():
     try:
         input=request.get_json()
@@ -22,5 +22,5 @@ def processDepartments():
         db.session.commit()
         return {"status": "success"}, 201
     except:
-        abort({'status':"Internal server error"},500) 
+        abort({'status':"Internal server error"},500)
 
